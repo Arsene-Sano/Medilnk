@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLink – Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- ══════════════════════════════
+       SIDEBAR
+  ══════════════════════════════ -->
+  <aside class="sidebar">
+
+    <a href="index.html" class="sb-logo">
+      <h1>Medi<span>Link</span></h1>
+      <p>Healthcare Management</p>
+    </a>
+
+    <div class="sb-section">Main</div>
+    <a href="dashboard.html" class="nav-item active">
+      <span class="nav-icon">⊞</span> Dashboard
+    </a>
+    <div class="nav-item">
+      <span class="nav-icon">📅</span> Appointments
+      <span class="nav-badge">12</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">👥</span> Patients
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">👨‍⚕️</span> Doctors
+    </div>
+
+    <div class="sb-section">Clinical</div>
+    <div class="nav-item">
+      <span class="nav-icon">📋</span> Medical Records
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">💊</span> Pharmacy
+      <span class="nav-badge red">3</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">🧪</span> Laboratory
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">🏦</span> Billing &amp; Insurance
+    </div>
+
+    <div class="sb-section">Admin</div>
+    <div class="nav-item">
+      <span class="nav-icon">📊</span> MoH Reports
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">🔔</span> Alerts
+      <span class="nav-badge red">2</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">⚙️</span> Settings
+    </div>
+
+    <div class="sb-footer">
+      <div class="sb-user">
+        <div class="sb-avatar">UA</div>
+        <div>
+          <div class="sb-name">Dr. Umukunzi A.</div>
+          <div class="sb-role">Administrator</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════
+       MAIN
+  ══════════════════════════════ -->
+  <div class="dash-main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="tb-left">
+        <h2>Good morning, Dr. Umukunzi 👋</h2>
+        <p>Thursday, 07 May 2026 &nbsp;·&nbsp; Kigali Health Centre</p>
+      </div>
+      <div class="tb-right">
+        <button class="tb-btn">
+          🔔 Alerts &nbsp;<span class="alert-dot">2</span>
+        </button>
+        <button class="tb-btn">📥 Export</button>
+        <a href="register.html" class="tb-btn primary">+ New Patient</a>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="dash-content">
+
+      <!-- ── STAT CARDS ── -->
+      <div class="stats-row">
+
+        <div class="stat-card teal">
+          <div class="stat-top">
+            <div class="stat-lbl">Patients Today</div>
+            <div class="stat-icon-box">👥</div>
+          </div>
+          <div class="stat-val">248</div>
+          <div class="stat-sub up">↑ 12 from yesterday</div>
+        </div>
+
+        <div class="stat-card amber">
+          <div class="stat-top">
+            <div class="stat-lbl">Appointments</div>
+            <div class="stat-icon-box">📅</div>
+          </div>
+          <div class="stat-val">37</div>
+          <div class="stat-sub">12 pending · 25 confirmed</div>
+        </div>
+
+        <div class="stat-card red">
+          <div class="stat-top">
+            <div class="stat-lbl">Critical Alerts</div>
+            <div class="stat-icon-box">⚠️</div>
+          </div>
+          <div class="stat-val">2</div>
+          <div class="stat-sub">Requires immediate action</div>
+        </div>
+
+        <div class="stat-card blue">
+          <div class="stat-top">
+            <div class="stat-lbl">Doctors On Duty</div>
+            <div class="stat-icon-box">👨‍⚕️</div>
+          </div>
+          <div class="stat-val">12</div>
+          <div class="stat-sub">8 available · 4 busy</div>
+        </div>
+
+      </div>
+
+      <!-- ── APPOINTMENTS + QUICK ACTIONS ── -->
+      <div class="two-col">
+
+        <!-- APPOINTMENTS TABLE -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Today's Appointments</h3>
+            <a>View all →</a>
+          </div>
+          <table class="appt-table">
+            <thead>
+              <tr>
+                <th>Patient</th>
+                <th>Time</th>
+                <th>Doctor</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av teal">JH</div>
+                    <div>
+                      <div class="pt-name">Jean-Paul Habimana</div>
+                      <div class="pt-id">#PT-00142</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">09:00 AM</td>
+                <td class="type-col">Dr. Uwase</td>
+                <td class="type-col">Consultation</td>
+                <td><span class="badge confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av amber">AM</div>
+                    <div>
+                      <div class="pt-name">Aline Mukamana</div>
+                      <div class="pt-id">#PT-00098</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">10:30 AM</td>
+                <td class="type-col">Dr. Nkusi</td>
+                <td class="type-col">Follow-up</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av blue">EN</div>
+                    <div>
+                      <div class="pt-name">Eric Nsabimana</div>
+                      <div class="pt-id">#PT-00211</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">11:15 AM</td>
+                <td class="type-col">Dr. Uwase</td>
+                <td class="type-col">Lab Results</td>
+                <td><span class="badge confirmed">Confirmed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av red">GM</div>
+                    <div>
+                      <div class="pt-name">Grace Mutesi</div>
+                      <div class="pt-id">#PT-00057</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">01:00 PM</td>
+                <td class="type-col">Dr. Kagabo</td>
+                <td class="type-col">Emergency</td>
+                <td><span class="badge cancelled">Cancelled</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av teal">BI</div>
+                    <div>
+                      <div class="pt-name">Bernard Ingabire</div>
+                      <div class="pt-id">#PT-00183</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">02:30 PM</td>
+                <td class="type-col">Dr. Nkusi</td>
+                <td class="type-col">Vaccination</td>
+                <td><span class="badge completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="pt-cell">
+                    <div class="pt-av amber">CU</div>
+                    <div>
+                      <div class="pt-name">Claudine Uwineza</div>
+                      <div class="pt-id">#PT-00319</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="time-col">04:00 PM</td>
+                <td class="type-col">Dr. Uwase</td>
+                <td class="type-col">Consultation</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="card-body">
+            <div class="qa-list">
+              <a href="register.html" class="qa-item">
+                <div class="qa-icon teal">➕</div>
+                <div class="qa-text">
+                  <strong>Register New Patient</strong>
+                  <span>Add to system</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </a>
+              <div class="qa-item">
+                <div class="qa-icon amber">📅</div>
+                <div class="qa-text">
+                  <strong>Book Appointment</strong>
+                  <span>Schedule a slot</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </div>
+              <div class="qa-item">
+                <div class="qa-icon blue">📋</div>
+                <div class="qa-text">
+                  <strong>View Patient Records</strong>
+                  <span>Search medical history</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </div>
+              <div class="qa-item">
+                <div class="qa-icon red">💊</div>
+                <div class="qa-text">
+                  <strong>Send Prescription</strong>
+                  <span>Digital order to pharmacy</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </div>
+              <div class="qa-item">
+                <div class="qa-icon teal">🧪</div>
+                <div class="qa-text">
+                  <strong>Request Lab Test</strong>
+                  <span>Send to laboratory</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </div>
+              <div class="qa-item">
+                <div class="qa-icon amber">📊</div>
+                <div class="qa-text">
+                  <strong>Generate MoH Report</strong>
+                  <span>Compliance &amp; statistics</span>
+                </div>
+                <span class="qa-arrow">›</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end two-col -->
+
+      <!-- ── CHARTS + DOCTORS + ALERTS/ACTIVITY ── -->
+      <div class="three-col">
+
+        <!-- WEEKLY CHART + DONUT -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Weekly Patients</h3>
+            <span>This week</span>
+          </div>
+          <div class="card-body">
+
+            <div class="bar-chart">
+              <div class="bar-col">
+                <div class="bar dim-1" style="height:55px"></div>
+                <span class="bar-lbl">Mon</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-2" style="height:80px"></div>
+                <span class="bar-lbl">Tue</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-3" style="height:65px"></div>
+                <span class="bar-lbl">Wed</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-4" style="height:96px"></div>
+                <span class="bar-lbl">Thu</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-5" style="height:70px"></div>
+                <span class="bar-lbl">Fri</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-6" style="height:38px"></div>
+                <span class="bar-lbl">Sat</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar dim-7" style="height:18px"></div>
+                <span class="bar-lbl">Sun</span>
+              </div>
+            </div>
+
+            <div class="chart-footer">
+              <span>Total: <strong>1,243</strong> patients</span>
+              <span class="up">↑ 8.4% vs last week</span>
+            </div>
+
+            <hr class="chart-divider">
+
+            <div class="chart-subtitle">Appointment Status</div>
+            <div class="donut-wrap">
+              <div class="donut">
+                <div class="donut-hole">
+                  <strong>37</strong>
+                  <span>total</span>
+                </div>
+              </div>
+              <div class="legend">
+                <div class="leg-item">
+                  <div class="leg-dot teal"></div>
+                  Confirmed
+                  <span class="leg-pct">62%</span>
+                </div>
+                <div class="leg-item">
+                  <div class="leg-dot amber"></div>
+                  Pending
+                  <span class="leg-pct">18%</span>
+                </div>
+                <div class="leg-item">
+                  <div class="leg-dot blue"></div>
+                  Completed
+                  <span class="leg-pct">13%</span>
+                </div>
+                <div class="leg-item">
+                  <div class="leg-dot red"></div>
+                  Cancelled
+                  <span class="leg-pct">7%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DOCTORS ON DUTY -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Doctors On Duty</h3>
+            <a>Manage →</a>
+          </div>
+          <div class="card-body">
+            <div class="doc-list">
+
+              <div class="doc-item">
+                <div class="doc-av teal">UW</div>
+                <div>
+                  <div class="doc-name">Dr. Uwase Marie</div>
+                  <div class="doc-spec">General Medicine</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill available">Available</span>
+                </div>
+              </div>
+
+              <div class="doc-item">
+                <div class="doc-av amber">NK</div>
+                <div>
+                  <div class="doc-name">Dr. Nkusi Patrick</div>
+                  <div class="doc-spec">Pediatrics</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill busy">In Consult</span>
+                </div>
+              </div>
+
+              <div class="doc-item">
+                <div class="doc-av blue">KG</div>
+                <div>
+                  <div class="doc-name">Dr. Kagabo Pierre</div>
+                  <div class="doc-spec">Surgery</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill available">Available</span>
+                </div>
+              </div>
+
+              <div class="doc-item">
+                <div class="doc-av teal">MU</div>
+                <div>
+                  <div class="doc-name">Dr. Muneza Claire</div>
+                  <div class="doc-spec">Cardiology</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill break">On Break</span>
+                </div>
+              </div>
+
+              <div class="doc-item">
+                <div class="doc-av red">RW</div>
+                <div>
+                  <div class="doc-name">Dr. Rwema Jules</div>
+                  <div class="doc-spec">Dermatology</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill busy">In Consult</span>
+                </div>
+              </div>
+
+              <div class="doc-item">
+                <div class="doc-av amber">HA</div>
+                <div>
+                  <div class="doc-name">Dr. Habimana Leo</div>
+                  <div class="doc-spec">Ophthalmology</div>
+                </div>
+                <div class="doc-status">
+                  <span class="status-pill available">Available</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ALERTS + ACTIVITY FEED -->
+        <div class="stack-col">
+
+          <!-- ALERTS -->
+          <div class="card">
+            <div class="card-head">
+              <h3>🔔 Active Alerts</h3>
+              <a>Dismiss all</a>
+            </div>
+            <div class="card-body">
+              <div class="alert-list">
+
+                <div class="alert-item danger">
+                  <span class="alert-icon">🚨</span>
+                  <div>
+                    <div class="alert-title">Low Medication Stock</div>
+                    <div class="alert-desc">Paracetamol below minimum threshold · Pharmacy · 2h ago</div>
+                  </div>
+                </div>
+
+                <div class="alert-item warning">
+                  <span class="alert-icon">⚠️</span>
+                  <div>
+                    <div class="alert-title">Lab Results Overdue</div>
+                    <div class="alert-desc">Patient #PT-00098 results pending 48h · Lab · 5h ago</div>
+                  </div>
+                </div>
+
+                <div class="alert-item info">
+                  <span class="alert-icon">ℹ️</span>
+                  <div>
+                    <div class="alert-title">MoH Report Due</div>
+                    <div class="alert-desc">Monthly compliance report due in 3 days · Today</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- RECENT ACTIVITY -->
+          <div class="card">
+            <div class="card-head">
+              <h3>Recent Activity</h3>
+              <span>Live</span>
+            </div>
+            <div class="card-body">
+              <div class="activity-feed">
+
+                <div class="act-item">
+                  <div class="act-dot teal"></div>
+                  <div>
+                    <div class="act-body">
+                      <strong>New patient registered</strong> — Jean-Paul Habimana #PT-00142
+                    </div>
+                    <div class="act-time">9:02 AM</div>
+                  </div>
+                </div>
+
+                <div class="act-item">
+                  <div class="act-dot blue"></div>
+                  <div>
+                    <div class="act-body">
+                      <strong>Prescription sent</strong> to pharmacy by Dr. Uwase
+                    </div>
+                    <div class="act-time">9:45 AM</div>
+                  </div>
+                </div>
+
+                <div class="act-item">
+                  <div class="act-dot amber"></div>
+                  <div>
+                    <div class="act-body">
+                      <strong>Appointment rescheduled</strong> — Grace Mutesi to tomorrow
+                    </div>
+                    <div class="act-time">10:12 AM</div>
+                  </div>
+                </div>
+
+                <div class="act-item">
+                  <div class="act-dot teal"></div>
+                  <div>
+                    <div class="act-body">
+                      <strong>Lab results uploaded</strong> for patient #PT-00183
+                    </div>
+                    <div class="act-time">11:30 AM</div>
+                  </div>
+                </div>
+
+                <div class="act-item">
+                  <div class="act-dot red"></div>
+                  <div>
+                    <div class="act-body">
+                      <strong>Low stock alert</strong> triggered — Paracetamol
+                    </div>
+                    <div class="act-time">12:05 PM</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end stack-col -->
+
+      </div>
+      <!-- end three-col -->
+
+    </div>
+    <!-- end dash-content -->
+
+  </div>
+  <!-- end dash-main -->
+
+</body>
+</html>
