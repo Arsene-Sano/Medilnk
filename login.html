@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLink – Sign In</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Specific styling tweaks to complement style.css for the Login view */
+    .login-body {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      min-height: 100vh;
+      background: var(--cream);
+    }
+    @media (max-width: 900px) {
+      .login-body { grid-template-columns: 1fr; }
+      .left-panel { display: none; }
+    }
+    .form-container {
+      max-width: 420px;
+      width: 100%;
+      margin: auto;
+      padding: 40px 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(10, 158, 132, 0.12);
+    }
+    .error-msg {
+      color: var(--red);
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-top: 4px;
+      display: none;
+    }
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      margin-bottom: 24px;
+    }
+    .form-options a {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .form-options a:hover {
+      text-decoration: underline;
+    }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .switch-auth {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .switch-auth a {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .switch-auth a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="login-body">
+
+  <aside class="left-panel">
+    <a href="index.html" class="panel-logo">Medi<span>Link</span></a>
+
+    <div class="panel-content">
+      <div class="panel-badge">
+        <span class="panel-badge-dot"></span>
+        Secure Portal
+      </div>
+      <h2>Welcome Back to MediLink</h2>
+      <p class="panel-desc">
+        Sign in to access your digital workspace, update patient medical profiles, coordinate appointments, and generate compliant clinical reports.
+      </p>
+      <ul class="trust-list">
+        <li>Real-time database synchronization</li>
+        <li>Role-based access permissions</li>
+        <li>Encrypted credentials storage</li>
+        <li>Active threat monitoring logs</li>
+      </ul>
+    </div>
+
+    <div class="panel-footer">
+      <br>
+      <br>
+      
+    </div>
+  </aside>
+
+  <main class="right-panel" style="display: flex; align-items: center; justify-content: center;">
+    
+    <div class="form-container">
+      <div class="form-header" style="margin-bottom: 32px;">
+        <h2 style="font-family: var(--font-head); color: var(--navy); font-size: 1.8rem; margin-bottom: 6px;">Account Sign In</h2>
+        <p style="color: var(--muted); font-size: 0.88rem;">Enter your credentials to manage clinical operations.</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        
+        <div class="form-group">
+          <label for="login-role">Select Workspace Role</label>
+          <select id="login-role" required>
+            <option value="" disabled selected>-- Choose your clinical role --</option>
+            <option value="doctor">Doctor / Nurse</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="pharmacy">Pharmacy / Laboratory</option>
+            <option value="patient">Patient Portal</option>
+            <option value="auditor">MoH Auditor</option>
+          </select>
+          <div class="error-msg" id="role-err">Please select your workspace role.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" placeholder="example@health.gov.rw" required>
+          <div class="error-msg" id="email-err">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+          <div class="error-msg" id="pw-err">Password must be at least 8 characters long.</div>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember">
+            <span>Remember device</span>
+          </label>
+          <a href="#" onclick="alert('Password reset module is currently offline. Please contact the system administrator.')">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">
+          Secure Login →
+        </button>
+
+        <div class="switch-auth">
+          Don't have an account yet? <a href="register.html">Create Account</a>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <script src="scripts/script.js"></script>
+  </script>
+</body>
+</html>
