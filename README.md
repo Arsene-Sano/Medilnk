@@ -28,10 +28,13 @@ The platform is engineered completely dependency-free utilizing semantic native 
 
 ## 📁 Repository Architecture & Blueprint
 
+Includes a dedicated project report for implementation context, analysis, and evaluation.
 
 ```text
-├── index.html       # Public-facing landing system, marketing portal, and partner alignment mapping.
+├── index.html       # Public-facing landing system, marketing portal, partner alignment mapping.
 ├── login.html       # Secure user authentication interface gating access to administrative panels.
 ├── register.html    # Secure multi-step enrollment wizard handling client-side constraint checking.
 ├── dashboard.html   # Centralized operations command panel populated with system charts, logs, and summaries.
+├── project_report/  # Detailed project documentation and technical report files.
+│   └── MediLink_Technical_Report.pdf  # Comprehensive design, implementation, and evaluation review.
 └── style.css        # Core design system stylesheet governing global components, layout flows, and break logic.
